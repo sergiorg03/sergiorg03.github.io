@@ -126,17 +126,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }*/
 
     const downloadBtn = document.getElementById('DownloadPDF');
+    const checkButtonLanguage = document.getElementById('checkButtonLanguage');
 
     if (downloadBtn) {
         downloadBtn.addEventListener('click', function () {
-            const pdfUrl = 'docs/cv_srg.pdf'; // Ruta del PDF (en la carpeta base de GitHub)
+            const isEnglish = checkButtonLanguage.checked;
+            const pdfUrl = 'docs/cv_srg_' + ((isEnglish) ? 'en' : 'es') + '.pdf'; // Si está pulsado el pdf a descargar será en idioma ingles, si no en español. El idioma por defecto será el
+            //const pdfUrl = 'docs/cv_srg.pdf'; // Ruta del PDF (en la carpeta base de GitHub)
             fetch(pdfUrl, { method: 'HEAD' })
                 .then(response => {
                     if (response.ok) {
                         // Si existe, creamos el enlace y forzamos la descarga
                         const link = document.createElement("a");
                         link.href = pdfUrl;
-                        link.download = "cv_srg.pdf";
+                        link.download = isEnglish ? "CV_SergioRodriguez_EN.pdf" : "CV_SergioRodriguez_ES.pdf";
                         link.click();
                     } else {
                         alert("No es posible descargar el CV actualmente. Por favor, inténtalo más tarde.");
@@ -147,6 +150,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert("No es posible descargar el CV actualmente. Por favor, inténtalo más tarde.");
                 });
         });
+    }
+
+    if (checkButtonLanguage) {
+        const updateLangLabels = () => {
+            const esLabel = document.querySelector('.lang-label:first-child');
+            const enLabel = document.querySelector('.lang-label:last-child');
+            if (checkButtonLanguage.checked) {
+                esLabel.style.color = 'var(--text-secondary)';
+                enLabel.style.color = 'var(--primary)';
+            } else {
+                esLabel.style.color = 'var(--primary)';
+                enLabel.style.color = 'var(--text-secondary)';
+            }
+        };
+
+        checkButtonLanguage.addEventListener('change', updateLangLabels);
+        updateLangLabels(); // Initial state
     }
 
     // 6. Configuración de mis botones de redes sociales
