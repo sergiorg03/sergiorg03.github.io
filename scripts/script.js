@@ -216,4 +216,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setupSocialBtn('btn-linkedin');
     setupSocialBtn('btn-github');
     //setupSocialBtn('btn-gitlab');
+
+    // Configuración para el correo electronico y evitar spam
+    const user = "sergiorodriguezprofesional";
+    const domain = "gmail.com";
+
+    const email = user + "@" + domain;
+    document.getElementById("contacto").href = "mailto:" + email;
+
 });

@@ -49,6 +49,7 @@
           <a href="#about" data-i18n="nav_about">Sobre mí</a>
           <a href="#skills" data-i18n="nav_skills">Habilidades</a>
           <a href="#education" data-i18n="nav_education">Formación</a>
+          <a href="#work-experience" data-i18n="nav_work">Experiencia Laboral</a>
           <a href="#contact" data-i18n="nav_contact">Contacto</a>
         </div>
         <div class="language-switch">
@@ -59,7 +60,7 @@
           </label>
           <span class="lang-label">EN</span>
         </div>
-        <a href="mailto:sergiorodriguezprofesional@gmail.com" class="btn btn-primary"
+        <a id="contacto" class="btn btn-primary"
           style="padding: 0.6rem 1.2rem; font-size: 0.9rem;" data-i18n="nav_cta">Hablemos</a>
       </div>
     </nav>
@@ -156,13 +157,13 @@
       <h2 class="section-title" data-i18n="edu_title">Formación Académica</h2>
       <div class="timeline">
         <div class="timeline-card reveal">
-          <span style="color: var(--primary); font-weight: 700;" data-i18n="edu_current">Actualmente</span>
+          <span style="color: var(--primary); font-weight: 700;" data-i18n="current">Actualmente</span>
           <h3 data-i18n="edu_master_python">Master en Python</h3>
           <p style="color: var(--text-secondary);" data-i18n="edu_master_python_desc">Curso de especialización de desarrollo de aplicaciones en lenguaje
             Python</p>
         </div>
         <div class="timeline-card reveal">
-          <span style="color: var(--primary); font-weight: 700;" data-i18n="edu_current">Actualmente</span>
+          <span style="color: var(--primary); font-weight: 700;" data-i18n="current">Actualmente</span>
           <h3 data-i18n="edu_c1_english">Inglés Nivel C1</h3>
           <p style="color: var(--text-secondary);" data-i18n="edu_c1_english_desc">Escuela Oficial de Idiomas (Sevilla)</p>
         </div>
@@ -179,6 +180,24 @@
       </div>
     </section>
 
+    <!-- Sección de mi trayectoria profesional -->
+    <section id="work-experience">
+      <span class="section-tag" data-i18n="work_tag">Trayectoria</span>
+      <h2 class="section-title" data-i18n="work_title">Experiencia Laboral</h2>
+      <div class="timeline">
+        <div class="timeline-card reveal">
+          <span style="color: var(--text-secondary); font-weight: 700;">2024 | 2025</span>
+          <h3 data-i18n="work_horse">Operario de línea de montaje</h3>
+          <p style="color: var(--text-secondary);" data-i18n="work_horse_desc"></p>
+        </div>
+        <div class="timeline-card reveal">
+          <span style="color: var(--text-secondary); font-weight: 700;">2023</span>
+          <h3 data-i18n="work_accenture">Becario de Software</h3>
+          <p style="color: var(--text-secondary);" data-i18n="work_accenture_desc">Análisis y resolución de incidencias funcionales y técnicas en aplicación de producción en el proyecto para Endesa utilizando tecnología Salesforce (APEX), trabajando en equipo dentro del entorno corporativo.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Sección de contacto y mis redes sociales -->
     <section id="contact">
       <div class="bento-item large reveal"
@@ -186,7 +205,7 @@
         <h2 style="font-size: 2.5rem; margin-bottom: 1rem;" data-i18n="contact_title">¿Hablamos?</h2>
         <p style="opacity: 0.9; margin-bottom: 2rem;" data-i18n="contact_desc">Estoy disponible para nuevas oportunidades y colaboraciones.</p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="mailto:sergiorodriguezprofesional@gmail.com" class="btn"
+          <a id="contacto" class="btn"
             style="background: white; color: var(--primary);"><i class="fas fa-envelope"></i> <span data-i18n="contact_btn">Escríbeme</span></a>
           <!-- <button id="DownloadPDF" class="btn btn-outline" style="border-color: white; color: white;"><i
               class="fas fa-download"></i> Descargar CV</button> -->
@@ -205,7 +224,7 @@
     </section>
 
     <footer>
-      <p style="font-weight: 600;">SERGIO RODRÍGUEZ GENIZ</p>
+      <p style="font-weight: 600;">SERGIO RODRIGUEZ GENIZ</p>
       <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;" data-i18n="footer_country">España</p>
     </footer>
 
