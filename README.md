@@ -33,6 +33,7 @@ Soy **Sergio Rodríguez Geniz**, Técnico Superior en D.A.M. apasionado por cons
 ├── docs/           # Documentos del proyecto (CV)
 ├── icons/          # Recursos gráficos e iconos
 ├── img/            # Imágenes del proyecto
+├── languages/      # Idiomas del proyecto
 ├── scripts/        # Lógica de interactividad (script.js)
 ├── style/          # Hojas de estilo (style.css)
 ├── index.html      # Punto de entrada principal
