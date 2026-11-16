@@ -286,3 +286,114 @@ footer{border-top:1px solid var(--border);padding:1.5rem 3rem;display:flex;justi
   #hero{padding:6rem 1.5rem 4rem}
   .nav-links{display:none}
 }
+
+.github-container {
+    width: 100%;
+}
+
+.github-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.github-header h2 {
+    font-size: 1rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.github-header a {
+    color: var(--green2);
+    text-decoration: none;
+    font-size: 11px;
+    transition: color .2s;
+}
+
+.github-header a:hover {
+    color: var(--green);
+}
+
+.github-calendar {
+    width: 100%;
+    background: #000;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 24px;
+    color: #e6edf3;
+}
+
+#contributions-count {
+    font-size: 12px;
+    color: #e6edf3;
+    margin-bottom: 20px;
+}
+
+.calendar-scroll {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+#contributions-calendar {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(7, 11px);
+    grid-auto-columns: 11px;
+    gap: 3px;
+    width: max-content;
+}
+
+.contribution-day {
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+    background: #161b22;
+    border: 1px solid rgba(255,255,255,.03);
+    transition: border-color .15s;
+}
+
+.contribution-day:hover {
+    border-color: #e6edf3;
+}
+
+.level-0 { background: #161b22; }
+.level-1 { background: #0e4429; }
+.level-2 { background: #006d32; }
+.level-3 { background: #26a641; }
+.level-4 { background: #39d353; }
+
+.calendar-legend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 16px;
+    font-size: 10px;
+    color: #8b949e;
+}
+
+.calendar-legend span[class^="level-"] {
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+}
+
+.github-status {
+    margin-top: 10px;
+    font-size: 10px;
+    color: var(--muted);
+}
+
+@media(max-width: 700px) {
+    .github-calendar {
+        padding: 16px;
+    }
+
+    .github-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
