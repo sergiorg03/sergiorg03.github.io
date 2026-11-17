@@ -35,10 +35,12 @@
   <div class="cursor-ring" id="cursor-ring"></div>
 
   <nav>
-    <div class="nav-logo"><span>//</span> SRG<span>.dev</span></div>
+    <!--<div class="nav-logo"><span>//</span> SRG<span>.dev</span></div>-->
+    <a href="#hero" class="nav-logo"><span>//</span> SRG<span>.dev</span></a>
     <div class="nav-links">
       <a href="#about">about</a>
       <a href="#skills">skills</a>
+      <a href="#github-activity">github</a>
       <a href="#timeline">timeline</a>
       <a href="#contact">contact</a>
     </div>
@@ -56,7 +58,7 @@
       <span class="line1 glitch" data-text="Sergio">Sergio</span>
       <span class="line2">Rodríguez Geniz</span>
     </h1>
-    <p class="hero-role typewriter">Backend Developer <span class="accent">// Python · Django · FastAPI</span></p>
+    <p class="hero-role typewriter">Backend Developer <span class="accent">// Python · AI · Docker</span></p>
     <div class="hero-cta">
       <a href="#skills" class="btn">./ver_habilidades.sh</a>
       <a href="projects.html" class="btn">./ver_proyectos.sh</a>
@@ -72,7 +74,7 @@
         <div class="stat-label">tecnologías</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">B2</div>
+        <div class="stat-num">C1</div>
         <div class="stat-label">inglés / C1 →</div>
       </div>
     </div>
@@ -85,14 +87,19 @@
     </div>
     <div class="about-grid">
       <div class="about-text">
-        <p>Desarrollador graduado en el <strong>IES Velázquez</strong> con especialización en aplicaciones
+        <p>Desarrollador graduado en el <strong>I.E.S. Velázquez</strong> con especialización en aplicaciones
           multiplataforma y backend.</p>
         <p>Creo que la programación es la herramienta perfecta para resolver problemas complejos con <strong>soluciones
             elegantes y eficientes</strong>. Mi enfoque está en el código limpio, la arquitectura sólida y la entrega de
           valor real.</p>
-        <p>Actualmente cursando un <strong>Master en Python</strong> e inglés C1 — siempre aprendiendo, siempre
-          creciendo.</p>
-        <p><strong>Sevilla, España</strong> — disponible para trabajo presencial, híbrido o remoto.</p>
+        <p>Completado recientemente un <strong>Master en Desarrollo de Aplicaciones en Lenguaje Python (CE)</strong> en
+          el que aprendí a desarrollar
+          aplicaciones web utilizando Python, Django y FastAPI, desarrollar modelos de IA generativa y análisis de
+          datos.</p>
+        <!--<p>Actualmente cursando un <strong>Master en Python</strong> e inglés C1 — siempre aprendiendo, siempre
+          creciendo.</p>-->
+        <p><strong>Sevilla, España</strong> — disponible para trabajo presencial, híbrido o remoto y disponibilidad de
+          movilidad geográfica.</p>
       </div>
       <div class="about-values">
         <div class="value-item">
@@ -102,7 +109,8 @@
         </div>
         <div class="value-item">
           <div class="value-icon">▸</div>
-          <div class="value-text"><strong>// Mejora Continua</strong>Master en Python + C1 de inglés en progreso. El
+          <div class="value-text"><strong>// Mejora Continua</strong>Formación en ciberseguridad + C2 de inglés en
+            progreso. El
             aprendizaje no para.</div>
         </div>
         <div class="value-item">
@@ -136,7 +144,7 @@
         <div class="bar-header"><span class="bar-name">Java / SpringBoot / Hibernate</span><span class="bar-pct"
             id="p2">0%</span></div>
         <div class="bar-track">
-          <div class="bar-fill" id="b2" data-pct="78"></div>
+          <div class="bar-fill" id="b2" data-pct="83"></div>
         </div>
       </div>
       <div class="skill-bar">
@@ -169,44 +177,133 @@
       </div>
     </div>
     <div class="skills-grid">
-      <div class="skill-card">
+
+      <!-- Backend Core -->
+      <!--<div class="skill-card"> Diseño original en el que se mostrarian las skills en un recuadro-->
+      <div class="skill-card featured">
         <div class="skill-cat">// Backend Core</div>
         <div class="skill-tags">
           <span class="tag primary">Python</span>
           <span class="tag primary">Django</span>
           <span class="tag primary">FastAPI</span>
-          <span class="tag">Flask</span>
           <span class="tag">REST APIs</span>
         </div>
       </div>
+
+      <!-- DevOps & Infrastructure -->
+      <!--<div class="skill-card"> Diseño original en el que se mostrarian las skills en un recuadro-->
+        <div class="skill-card featured">
+        <div class="skill-cat">// DevOps &amp; Infrastructure</div>
+        <div class="skill-tags">
+          <span class="tag primary">Docker</span>
+          <span class="tag primary">Git</span>
+          <span class="tag primary">Nginx</span>
+          <span class="tag primary">Caddy</span>
+          <span class="tag">Linux</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">Cloudflare</span>
+          <span class="tag">Cloudflare Tunnel</span>
+        </div>
+      </div>
+
+      <!-- Artificial Intelligence -->
+      <div class="skill-card">
+        <div class="skill-cat">// Artificial Intelligence &amp; Document Processing </div>
+        <div class="skill-tags">
+          <span class="tag primary">Google Gemini</span>
+          <span class="tag primary">Ollama</span>
+          <span class="tag primary">LangChain</span>
+          <span class="tag">PyMuPDF</span>
+          <span class="tag">PyPDF2</span>
+          <span class="tag">Pydantic</span>
+        </div>
+      </div>
+
+      <!-- JVM Ecosystem -->
       <div class="skill-card">
         <div class="skill-cat">// JVM Ecosystem</div>
         <div class="skill-tags">
           <span class="tag primary">Java</span>
-          <span class="tag primary">SpringBoot</span>
+          <span class="tag primary">Spring Boot</span>
           <span class="tag">Hibernate</span>
-          <span class="tag">Maven</span>
         </div>
       </div>
+
+      <!-- Data & Storage -->
       <div class="skill-card">
         <div class="skill-cat">// Data &amp; Storage</div>
         <div class="skill-tags">
           <span class="tag primary">SQL</span>
+          <span class="tag primary">PL/SQL</span>
           <span class="tag">PostgreSQL</span>
           <span class="tag">MySQL</span>
-          <span class="tag">ORM</span>
         </div>
       </div>
+
+      <!-- Web & Mobile -->
       <div class="skill-card">
-        <div class="skill-cat">// Mobile &amp; Enterprise</div>
+        <div class="skill-cat">// Web &amp; Mobile</div>
         <div class="skill-tags">
-          <span class="tag primary">Android</span>
-          <span class="tag primary">Salesforce</span>
-          <span class="tag">APEX</span>
-          <span class="tag">HTML5/CSS3</span>
-          <span class="tag">JavaScript</span>
+          <span class="tag primary">HTML5</span>
+          <span class="tag primary">CSS3</span>
+          <span class="tag primary">JavaScript</span>
+          <span class="tag">Android</span>
         </div>
       </div>
+
+      <!-- Enterprise & Integrations -->
+      <div class="skill-card">
+        <div class="skill-cat">// Enterprise &amp; Integrations</div>
+        <div class="skill-tags">
+          <span class="tag primary">Salesforce</span>
+          <span class="tag primary">Apex</span>
+          <span class="tag">Stripe</span>
+          <span class="tag">PayPal</span>
+          <span class="tag">Brevo</span>
+          <span class="tag">Cloudflare R2</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="github-activity" class="section reveal">
+    <div class="section-header">
+      <span class="section-cmd">git log --author="sergiorg03"</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="github-container">
+      <div class="github-header">
+        <h2>GitHub Contributions</h2>
+        <a href="https://github.com/sergiorg03" target="_blank" rel="noopener noreferrer">
+          @sergiorg03 ↗
+        </a>
+      </div>
+
+      <div class="github-calendar">
+        <div id="contributions-count">
+          Cargando contribuciones...
+        </div>
+
+        <div class="calendar-scroll">
+          <div id="contributions-calendar"></div>
+        </div>
+
+        <div class="calendar-legend">
+          <span>Less</span>
+          <span class="level-0"></span>
+          <span class="level-1"></span>
+          <span class="level-2"></span>
+          <span class="level-3"></span>
+          <span class="level-4"></span>
+          <span>More</span>
+        </div>
+      </div>
+
+      <p id="github-status" class="github-status">
+        Conectando con GitHub...
+      </p>
     </div>
   </section>
 
@@ -217,9 +314,10 @@
     </div>
     <div class="timeline">
       <div class="tl-item">
+        <div class="tl-year">2026</div>
         <div class="tl-title">Inglés C2</div>
         <div class="tl-place">Escuela Oficial de Idiomas — Sevilla</div>
-        <div class="tl-desc">Nivel C1 acreditado mediante titulación oficial.</div>
+        <!--<div class="tl-desc">Nivel C2 acreditado mediante titulación oficial.</div>-->
         <span class="tl-badge active">▶ EN CURSO</span>
       </div>
       <div class="tl-item">
@@ -312,6 +410,7 @@
   </footer>
 
   <script src="scripts/script.js"></script>
+  <script src="scripts/github-calendar.js"></script>
 </body>
 
 </html>
