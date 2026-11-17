@@ -1,60 +1,58 @@
-# 🚀 Personal Portfolio - Sergio Rodríguez Geniz
+# Portfolio personal — Sergio Rodríguez Geniz
 
-Bienvenido a mi portfolio personal. Este repositorio contiene el código fuente de mi sitio web profesional, el cual ha sido completamente rediseñado con una estética de **Terminal Interactiva Hacker (Retro-Futurista)**. Está concebido para mostrar mi trayectoria, habilidades y proyectos como Desarrollador Backend de una manera única y memorable.
+Este repositorio contiene el código de mi sitio profesional: [sergiorg03.github.io](https://sergiorg03.github.io/). Lo mantengo para presentar mi trayectoria, las tecnologías con las que trabajo y los proyectos que he hecho hasta ahora.
 
-✨ **[Ver Portfolio en vivo](https://sergiorg03.github.io/)**
+La página está pensada como una terminal. Fondo oscuro, texto en un solo color y secciones que se leen como si fueran la salida de un comando. Quería un sitio ligero, fácil de recorrer y distinto de una plantilla genérica, sin depender de un framework.
 
----
+## Sobre mí
 
-## 👨‍💻 Sobre Mí
-Soy **Sergio Rodríguez Geniz**, desarrollador graduado en el **IES Velázquez** con especialización en aplicaciones multiplataforma y desarrollo backend. 
-Me enfoco firmemente en crear soluciones técnicas elegantes, eficientes y robustas. Actualmente estoy cursando un **Master en Python** y perfeccionando mi inglés (EOI C1). Mis pilares profesionales son el orden, el compromiso y el aprendizaje constante.
+Soy Sergio Rodríguez Geniz, desarrollador backend, titulado en Desarrollo de Aplicaciones Multiplataforma por el IES Velázquez (Sevilla).
 
----
+En 2023 trabajé como becario de software en Accenture Spain, con Salesforce y Apex, analizando y resolviendo incidencias de la aplicación de producción. Después completé el Máster en Desarrollo de Aplicaciones en Lenguaje Python, centrado en Django, FastAPI, IA Generativa y análisis de datos.
 
-## 🛠️ Tecnologías y Arquitectura
+Tengo el C1 de inglés acreditado por la Escuela Oficial de Idiomas de Sevilla y estoy cursando el C2. Actualmente resido en Sevilla. Puedo trabajar en presencial, en híbrido o en remoto, y tengo disponibilidad para moverme geograficamente.
 
-### Core Frontend
-*   **HTML5 Semántico**: Estructura limpia y accesible de alto rendimiento SEO.
-*   **Vanilla CSS3 (JetBrains Mono)**: Tipografía y diseño de interfaz completamente a medida sin frameworks pesados, garantizando tiempos de carga casi instantáneos.
-*   **JavaScript (ES6+)**: Lógica personalizada encargada de la interactividad del terminal.
+## Tecnologías
 
-### Características del Diseño
-*   **Estética Terminal Hacker**: Combinación de color monocromo verde neón sobre fondos oscuros profundos.
-*   **Cursor Físico Dinámico**: Cursor interactivo personalizado compuesto por un punto central y un seguidor circular amortiguado que reacciona ampliándose en elementos interactivos.
-*   **Rejilla de Fondo y Filtro de Ruido CRT**: Fondo dinámico con un gradiente lineal de cuadrícula retro y una capa superior de grano de película analógico que imita pantallas CRT clásicas.
-*   **Barras de Carga Interactivas**: Animación secuencial del progreso de habilidades y contadores numéricos en tiempo real que se disparan dinámicamente cuando entran en pantalla (`IntersectionObserver`).
-*   **scroll-margin-top**: Transición y posicionamiento impecable de los enlaces de anclaje para no solaparse con la barra de navegación fija.
+La interfaz no usa frameworks. El peso está repartido así:
 
----
+- HTML para la estructura de `index.html` y `projects.html`.
+- CSS escrito a mano en [style/style.css](style/style.css), con JetBrains Mono como tipografía.
+- JavaScript en [scripts/script.js](scripts/script.js) para el cursor, la aparición de las secciones al hacer scroll y las barras de competencias.
 
-## 🚀 Funcionalidades Clave
-- 💻 **Terminal Shell Interactiva**: Estilo visual inspirado en comandos de Unix (`cat about.md`, `ls -la skills/`, `git log`).
-- 📱 **Diseño 100% Adaptativo (Responsive)**: Totalmente fluido para móviles, tablets y escritorios.
-- ⏬ **Descarga de CV Novedosa**: Enlace programado para descargar directamente la versión PDF actualizada en español (`docs/cv_srg_es.pdf`).
-- 📁 **Modularización de Código**: Separación estricta y profesional del HTML, estilos en [style.css](style/style.css) y scripts interactivos en [script.js](scripts/script.js).
+El formulario de la página de proyectos está en [scripts/projects.js](scripts/projects.js). El calendario de GitHub se dibuja desde [scripts/github-calendar.js](scripts/github-calendar.js).
 
----
+### Aspecto de la página
 
-## 📂 Estructura del Proyecto
+El fondo combina una rejilla con una capa de grano, al estilo de un monitor antiguo. El cursor es un punto con un anillo que lo sigue y crece al pasar sobre un enlace. Las barras de competencias y sus porcentajes se animan cuando la sección entra en pantalla, con `IntersectionObserver`. Los enlaces internos dejan un margen superior para no quedar ocultos detrás de la barra de navegación, que permanece fija.
+
+## Qué podemos encontrar en la página
+
+- La página principal reúne la presentación, el perfil, las competencias, el calendario de GitHub, la trayectoria y el contacto.
+- [projects.html](projects.html) lista los proyectos. Ahora mismo están este portfolio y [LegalLens](https://github.com/sergiorg03/LegalLens), una aplicación para revisar contratos en PDF con Django, FastAPI, Docker y Nginx. En esa misma página hay un formulario por si alguien quiere proponerme un trabajo.
+- El currículum se descarga en PDF desde la página principal: [docs/cv_srg_es.pdf](docs/cv_srg_es.pdf). En `docs/` también está la versión en inglés.
+- El calendario de contribuciones no consulta GitHub desde el navegador. Cada día, el flujo de [.github/workflows/update-contributions.yml](.github/workflows/update-contributions.yml) ejecuta [python/update_contributions.py](python/update_contributions.py), guarda el resultado en `data/github-contributions.json` y la página lee ese archivo. El token de la API está guardado como secreto del repositorio.
+- HTML, estilos y scripts van en carpetas distintas. [sitemap.xml](sitemap.xml) está publicado para que los buscadores indexen el sitio.
+
+## Estructura del proyecto
 
 ```text
 .
-├── docs/           # Documentos del proyecto (CV en PDF)
-├── img/            # Recursos visuales y favicon personalizado
-├── scripts/        # Lógica del cursor, scroll reveal y barras (script.js)
-├── style/          # Hoja de estilos del tema de terminal (style.css)
-├── index.html      # Estructura del sitio web
-├── sitemap.xml     # Mapa del sitio web para indexación de Google SEO
-└── README.md       # Documentación del proyecto (esta guía)
+├── .github/workflows/   Actualización diaria de las contribuciones
+├── data/                JSON con las contribuciones de GitHub
+├── docs/                Currículum en PDF (español e inglés)
+├── img/                 Fotografía de perfil, usada también como favicon
+├── python/              Consulta a la API de GitHub
+├── scripts/             JavaScript de la página
+├── style/               Hoja de estilos
+├── index.html           Página principal
+├── projects.html        Proyectos y formulario
+├── sitemap.xml
+└── README.md
 ```
 
----
+## Contacto
 
-## 📫 Contacto
-
-¿Hablamos? Puedes encontrarme a un comando de distancia:
-
-*   **Email**: [sergiorodriguezprofesional@gmail.com](mailto:sergiorodriguezprofesional@gmail.com)
-*   **LinkedIn**: [Sergio Rodríguez Geniz](https://www.linkedin.com/in/sergio-rodríguez-geniz-4530902a7)
-*   **GitHub**: [@sergiorg03](https://github.com/sergiorg03)
+- Correo: [sergiorodriguezprofesional@gmail.com](mailto:sergiorodriguezprofesional@gmail.com)
+- LinkedIn: [Sergio Rodríguez Geniz](https://www.linkedin.com/in/sergio-rodríguez-geniz-4530902a7)
+- GitHub: [@sergiorg03](https://github.com/sergiorg03)
