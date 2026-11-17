@@ -340,15 +340,15 @@ footer{border-top:1px solid var(--border);padding:1.5rem 3rem;display:flex;justi
 #contributions-calendar {
     display: grid;
     grid-auto-flow: column;
-    grid-template-rows: repeat(7, 11px);
-    grid-auto-columns: 11px;
+    grid-template-rows: repeat(7, 13px);
+    grid-auto-columns: minmax(11px, 1fr);
     gap: 3px;
-    width: max-content;
+    width: 100%;
 }
 
 .contribution-day {
-    width: 11px;
-    height: 11px;
+    width: 100%;
+    height: 13px;
     border-radius: 2px;
     background: #161b22;
     border: 1px solid rgba(255,255,255,.03);

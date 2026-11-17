@@ -18,7 +18,7 @@ def get_contributions(token: str)-> dict:
     start_date = now - timedelta(days=365)
 
     query = """
-        query($username: String!, $from: Datetime!, $to: Datetime!) {
+        query($username: String!, $from: DateTime!, $to: DateTime!) {
             user(login: $username) {
                 contributionsCollection(from: $from, to: $to) {
                     contributionCalendar {
