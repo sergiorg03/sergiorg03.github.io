@@ -1,15 +1,10 @@
 {
   "username": "sergiorg03",
-  "totalContributions": 235,
-  "generatedAt": "2026-11-24T16:59:45.778381+00:00",
+  "totalContributions": 234,
+  "generatedAt": "2026-11-25T16:49:54.515574+00:00",
   "weeks": [
     {
       "contributionDays": [
-        {
-          "date": "2025-11-24",
-          "contributionCount": 1,
-          "weekday": 1
-        },
         {
           "date": "2025-11-25",
           "contributionCount": 0,
@@ -2042,6 +2037,11 @@
           "date": "2026-11-24",
           "contributionCount": 4,
           "weekday": 2
+        },
+        {
+          "date": "2026-11-25",
+          "contributionCount": 0,
+          "weekday": 3
         }
       ]
     }
